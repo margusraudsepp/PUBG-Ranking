@@ -116,13 +116,17 @@ export class Top extends Command {
                     let character: Player = topPlayers[i];
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
+                    
                     if (character.username == 'kylapoiss') {
-                    names += '**KylaPoiss\n**';
+                        names += '**KylaPoiss\n**';
+                        ratings += '**'+ratingStr + '\n**';
+                        kds += '**'+kdsStr + '\n**';
                     } else {
-                    names += character.username + '\n';
+                        names += character.username + '\n';
+                        ratings += ratingStr + '\n';
+                        kds += kdsStr + '\n';
                     }
-                    ratings += ratingStr + '\n';
-                    kds += kdsStr + '\n';
+                   
                 }
 
                 embed.addField('Name', names, true)
