@@ -31,15 +31,15 @@ export class Top extends Command {
         usage: '<prefix>top [Number-Of-Users] [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [squadSize=(1 | 2 | 4)] [mode=(fpp | tpp)]',
         examples: [
             '!pubg-top',
-            '!pubg-top season=2018-03',
-            '!pubg-top season=2018-03 region=na',
-            '!pubg-top season=2018-03 region=na squadSize=4',
-            '!pubg-top season=2018-03 region=na squadSize=4 mode=tpp',
+            '!pubg-top season=2018-06',
+            '!pubg-top season=2018-06 region=eu',
+            '!pubg-top season=2018-06 region=eu squadSize=4',
+            '!pubg-top season=2018-06 region=eu squadSize=4 mode=fpp',
             '!pubg-top 5',
-            '!pubg-top 5 season=2018-03',
-            '!pubg-top 5 season=2018-03 region=na',
-            '!pubg-top 5 season=2018-03 region=na squadSize=4',
-            '!pubg-top 5 season=2018-03 region=na squadSize=4 mode=tpp'
+            '!pubg-top 5 season=2018-06',
+            '!pubg-top 5 season=2018-06 region=eu',
+            '!pubg-top 5 season=2018-06 region=eu squadSize=4',
+            '!pubg-top 5 season=2018-06 region=eu squadSize=4 mode=fpp'
         ]
     };
 
@@ -120,7 +120,7 @@ export class Top extends Command {
                     ratings += ratingStr + '\n';
                     kds += kdsStr + '\n';
                 }
-            embed.addField('No', i, true)
+            
                 embed.addField('Name', names, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
