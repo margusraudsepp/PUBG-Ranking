@@ -66,7 +66,7 @@ export class Top extends Command {
         }
 
         const batchEditAmount: number = 5;
-        checkingParametersMsg.edit(`Aggregating \`top ${amount}\` on \`${registeredPlayers.length} registered users\` ... give me a second`);
+        checkingParametersMsg.edit(`Aggregating \`top ${registeredPlayers.length}\` on \`${registeredPlayers.length} registered users\` ... give me a second`);
         msg.channel.send('Grabbing player data')
             .then(async (msg: Discord.Message) => {
                 let playersInfo: Player[] = new Array();
