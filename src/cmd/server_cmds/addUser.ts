@@ -51,9 +51,9 @@ export class AddUser extends Command {
                     if (pubgId && pubgId !== '') {
                         let registered: boolean = await sqlServerRegisteryService.registerUserToServer(pubgId, message.guild.id);
                         if(registered) {
-                            message.edit(`Added ${username}`);
+                            message.edit(`Added 1 ${username}`);
                         } else {
-                            message.edit(`Could not add ${username}`);
+                            message.edit(`Could 2 not add ${username}`);
                         }
                     } else {
                         message.edit(`Could not find ${username} on the ${region} region. Double check the username and region.`);
