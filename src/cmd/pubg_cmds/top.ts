@@ -126,7 +126,7 @@ export class Top extends Command {
                 await msg.edit({ embed });
             });
     };
-
+console.log("asd");
     async checkParameters(msg: Discord.Message, checkSeason: string, checkRegion: string, checkMode: string, checkSquadSize: string): Promise<boolean> {
         let errMessage: string = '';
         let validSeason: boolean = await pubgService.isValidSeason(checkSeason);
