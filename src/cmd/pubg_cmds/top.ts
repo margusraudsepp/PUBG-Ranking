@@ -117,7 +117,7 @@ export class Top extends Command {
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     if (character.username == 'kylapoiss') {
-                    names += 'KylaPoiss\n';
+                    names += '**KylaPoiss\n**';
                     } else {
                     names += character.username + '\n';
                     }
