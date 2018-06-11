@@ -120,7 +120,7 @@ export class Top extends Command {
                     ratings += ratingStr + '\n';
                     kds += kdsStr + '\n';
                 }
-            
+            embed.addField('asd', Discord.Member, true)
                 embed.addField('Name', names, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
