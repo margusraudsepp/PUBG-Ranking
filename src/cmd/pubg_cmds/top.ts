@@ -31,20 +31,20 @@ export class Top extends Command {
         usage: '<prefix>top [Number-Of-Users] [season=(2018-01 | 2018-02 | 2018-03)] [region=(na | as | kr/jp | kakao | sa | eu | oc | sea)] [squadSize=(1 | 2 | 4)] [mode=(fpp | tpp)]',
         examples: [
             '!pubg-top',
-            '!pubg-top season=2018-06',
-            '!pubg-top season=2018-06 region=eu',
-            '!pubg-top season=2018-06 region=eu squadSize=4',
-            '!pubg-top season=2018-06 region=eu squadSize=4 mode=fpp',
+            '!pubg-top season=2018-03',
+            '!pubg-top season=2018-03 region=na',
+            '!pubg-top season=2018-03 region=na squadSize=4',
+            '!pubg-top season=2018-03 region=na squadSize=4 mode=tpp',
             '!pubg-top 5',
-            '!pubg-top 5 season=2018-06',
-            '!pubg-top 5 season=2018-06 region=eu',
-            '!pubg-top 5 season=2018-06 region=eu squadSize=4',
-            '!pubg-top 5 season=2018-06 region=eu squadSize=4 mode=fpp'
+            '!pubg-top 5 season=2018-03',
+            '!pubg-top 5 season=2018-03 region=na',
+            '!pubg-top 5 season=2018-03 region=na squadSize=4',
+            '!pubg-top 5 season=2018-03 region=na squadSize=4 mode=tpp'
         ]
     };
 
     async run(bot: any, msg: any, params: string[], perms: number) {
-        let amount: number = 20;
+        let amount: number = 15;
         if (params[0] && !isNaN(+params[0])) {
             amount = +params[0];
         }
@@ -101,7 +101,7 @@ export class Top extends Command {
                 }
                 // Sorting Array based off of ranking (higher ranking is better)
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
-                let topPlayers: Player[] = playersInfo.slice(0, registeredPlayers.length);
+                let topPlayers: Player[] = playersInfo.slice(0, amount);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
                     .setTitle('Top ' + amount + ' local players' + Discord.Client)
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
@@ -120,8 +120,7 @@ export class Top extends Command {
                     ratings += ratingStr + '\n';
                     kds += kdsStr + '\n';
                 }
-                embed.addField('No', i, true)
-                    .addField('Name', names, true)
+                embed.addField('Name', names, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
                 await msg.edit({ embed });
