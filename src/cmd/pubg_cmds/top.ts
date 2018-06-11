@@ -44,7 +44,7 @@ export class Top extends Command {
     };
 
     async run(bot: any, msg: any, params: string[], perms: number) {
-        let amount: number = ${registeredPlayers.length};
+        let amount: number = registeredPlayers.length;
         if (params[0] && !isNaN(+params[0])) {
             amount = +params[0];
         }
@@ -103,7 +103,7 @@ export class Top extends Command {
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
                 let topPlayers: Player[] = playersInfo.slice(0, registeredPlayers.length);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
-                    .setTitle('Top ' + ${registeredPlayers.length} + ' local players')
+                    .setTitle('Top ' + amount + ' local players')
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
                     .setColor(0x00AE86)
                     .setFooter('Data retrieved from https://pubg.op.gg/')
