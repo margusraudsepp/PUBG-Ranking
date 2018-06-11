@@ -103,7 +103,7 @@ export class Top extends Command {
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
                 let topPlayers: Player[] = playersInfo.slice(0, amount);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
-                    .setTitle('Top ' + amount + ' local players' + client.user.username)
+                    .setTitle('Top ' + amount + ' local players')
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
                     .setColor(0x00AE86)
                     .setFooter('Data retrieved from https://pubg.op.gg/')
@@ -116,7 +116,11 @@ export class Top extends Command {
                     let character: Player = topPlayers[i];
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
+                    if (character.username == 'kylapoiss') {
+                    names += 'KylaPoiss\n';
+                    } else {
                     names += character.username + '\n';
+                    }
                     ratings += ratingStr + '\n';
                     kds += kdsStr + '\n';
                 }
