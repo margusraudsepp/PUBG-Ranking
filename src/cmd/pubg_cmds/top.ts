@@ -101,7 +101,7 @@ export class Top extends Command {
                 }
                 // Sorting Array based off of ranking (higher ranking is better)
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
-                let topPlayers: Player[] = playersInfo.slice(0, amount);
+                let topPlayers: Player[] = playersInfo.slice(0, ${registeredPlayers.length});
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
                     .setTitle('Top ' + amount + ' local players')
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
