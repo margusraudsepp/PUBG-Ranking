@@ -67,7 +67,7 @@ export class Top extends Command {
 
         const batchEditAmount: number = 5;
         checkingParametersMsg.edit(`Aggregating \`top ${amount}\` on \`${registeredPlayers.length} registered users\` ... give me a second`);
-        msg.channel.send('Grabbing player data' + Discord.Message)
+        msg.channel.send('Grabbing player data')
             .then(async (msg: Discord.Message) => {
                 let playersInfo: Player[] = new Array();
                 for (let i = 0; i < registeredPlayers.length; i++) {
@@ -130,6 +130,7 @@ export class Top extends Command {
                 }
 
                 embed.addField('Name', names, true)
+                    .addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
                 await msg.edit({ embed });
