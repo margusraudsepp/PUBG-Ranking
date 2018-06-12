@@ -67,7 +67,7 @@ export class Top extends Command {
 
         const batchEditAmount: number = 5;
         checkingParametersMsg.edit(`Aggregating \`top ${amount}\` on \`${registeredPlayers.length} registered users\` ... give me a second`);
-        msg.channel.send('Grabbing player data')
+        msg.channel.send('Grabbing player data' + Discord.Message)
             .then(async (msg: Discord.Message) => {
                 let playersInfo: Player[] = new Array();
                 for (let i = 0; i < registeredPlayers.length; i++) {
@@ -103,7 +103,7 @@ export class Top extends Command {
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
                 let topPlayers: Player[] = playersInfo.slice(0, amount);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
-                    .setTitle('Top ' + amount + ' local players' + Discord.Message)
+                    .setTitle('Top ' + amount + ' local players')
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
                     .setColor(0x00AE86)
                     //.setFooter('Data retrieved from https://pubg.op.gg/')
