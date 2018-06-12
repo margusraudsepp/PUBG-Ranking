@@ -103,10 +103,10 @@ export class Top extends Command {
                 playersInfo.sort(function (a: Player, b: Player) { return (+b.rating) - (+a.rating); });
                 let topPlayers: Player[] = playersInfo.slice(0, amount);
                 let embed: Discord.RichEmbed = new Discord.RichEmbed()
-                    .setTitle('Top ' + amount + ' local players' + Discord.Message.author)
+                    .setTitle('Top ' + amount + ' local players' + message.author)
                     .setDescription('Season:\t' + SeasonEnum[season] + '\nRegion:\t' + region.toUpperCase() + '\nMode: \t' + mode.toUpperCase() + '\nSquad Size: \t' + SquadSizeEnum[squadSize])
                     .setColor(0x00AE86)
-                    .setFooter('Data retrieved from https://pubg.op.gg/')
+                    //.setFooter('Data retrieved from https://pubg.op.gg/')
                     .setTimestamp();
                 let names: string = '';
                 let ratings: string = '';
