@@ -130,7 +130,7 @@ export class Top extends Command {
                 }
 
                 embed.addField('Name', names, true)
-                    .addField('Poster', Discord.Message.Author, true)
+                    //.addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
                 await msg.edit({ embed });
