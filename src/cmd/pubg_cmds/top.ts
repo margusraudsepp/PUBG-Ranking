@@ -23,8 +23,8 @@ client = discord.Client()
 bot=commands.Bot(command_prefix='!pubg')
 
 @bot.command(aliases=['rank', 'top'])
-    async def hello(ctc):
-                      await ct.send(ctx.autor.mention)
+async def hello(ctc):
+    wait ct.send(ctx.autor.mention)
 
 export class Top extends Command {
 
