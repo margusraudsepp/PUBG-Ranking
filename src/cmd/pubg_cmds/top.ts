@@ -20,9 +20,9 @@ import commands
 import asyncio
 
 client = discord.Client()
-bot=commands.Bot(command_prefix="!pubg")
+bot=commands.Bot(command_prefix='!pubg')
 
-@bot.command(aliases=["'rank', 'top'])
+@bot.command(aliases=['rank', 'top'])
     async def hello(ctc):
                       await ct.send(ctx.autor.mention)
 
