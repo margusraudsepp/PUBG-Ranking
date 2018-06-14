@@ -15,6 +15,15 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
+import discord 
+from discord.ext import commands
+import asyncio
+client = discord.CLient()
+bot=commands.Bot(command_prefix="!pubg")
+
+@bot.command(aliases=["'rank', 'top'])
+    async def hello(ctc):
+                      await ct.send(ctx.autor.mention)
 
 export class Top extends Command {
 
