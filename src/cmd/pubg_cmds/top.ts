@@ -15,10 +15,11 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-import discord 
-from discord.ext import commands
+import discord from discord.ext 
+import commands
 import asyncio
-client = discord.CLient()
+
+client = discord.Client()
 bot=commands.Bot(command_prefix="!pubg")
 
 @bot.command(aliases=["'rank', 'top'])
