@@ -130,23 +130,23 @@ export class Top extends Command {
                         names += '**' + (i+1) + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';
-                    } elseif (character.username == 'kreller') {
+                    } else if { (character.username == 'kreller') {
                         names += '**' + (i+1) + '. KreLLeR\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';    
-                    } elseif (character.username == 'thegodofgods') {
+                    } else if (character.username == 'thegodofgods') {
                         names += '**' + (i+1) + '. TheGodofGods\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';    
-                    } elseif (character.username == 'bambambiim') {
+                    } else if (character.username == 'bambambiim') {
                         names += '**' + (i+1) + '. BamBamBiim\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';   
-                    } elseif (character.username == 'tapanmaha') {
+                    } else if (character.username == 'tapanmaha') {
                         names += '**' + (i+1) + '. TapanMaha\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';  
-                    } elseif (character.username == 'saucecastillo') {
+                    } else if (character.username == 'saucecastillo') {
                         names += '**' + (i+1) + '. SauceCastillo\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';   
