@@ -55,6 +55,11 @@ export class Top extends Command {
         let checkingParametersMsg: Discord.Message = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message;
       
         print(Discord.Message.Author);
+                print(Discord.Message.Name);
+                print(Discord.Message.User);
+                print(Discord.Message.Username);
+                print(Discord.Message.Client);
+                print(Discord.Message.Id);
         
         if (!(await this.checkParameters(msg, season, region, mode, squadSize))) {
             checkingParametersMsg.delete();
