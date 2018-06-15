@@ -127,7 +127,7 @@ export class Top extends Command {
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     
-                    koht += i+1+'\n'; 
+                    koht += i+1+'.\n'; 
                     if (character.username == 'kylapoiss') {
                         names += '**' + (i+1) + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
@@ -167,7 +167,8 @@ export class Top extends Command {
                     }
                    
                 }
-                 embed.addField('No', koht, true)
+                 embed=discord.Embed(color=0x0080ff)
+                 embed.addField('No', koht, false)
                 .addField('Name', names, true)
                     //.addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
