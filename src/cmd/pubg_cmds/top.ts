@@ -53,7 +53,7 @@ export class Top extends Command {
         let mode: string = cs.getParamValue('mode=', params, serverDefaults.default_mode);
         let squadSize: string = cs.getParamValue('squadSize=', params, serverDefaults.default_squadSize);
         let checkingParametersMsg: Discord.Message = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message;
-        let checkingParametersMsgAuthor: Discord.Message.Author = (await msg.channel.send('Checking for valid parameters ...')) as Discord.Message.Author;
+      
         print(Discord.Message.Author);
         
         if (!(await this.checkParameters(msg, season, region, mode, squadSize))) {
