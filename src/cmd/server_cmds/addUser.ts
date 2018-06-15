@@ -36,7 +36,8 @@ export class AddUser extends Command {
         }
 
         for(let i=0; i < params.length; i++) {
-            let username: string = params[i].toLowerCase();
+            let username: string = params[i];
+            //let username: string = params[i].toLowerCase();
             if(username.indexOf('region=') >= 0){
                 continue;
             }
