@@ -15,14 +15,14 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-import discord 
-from discord.ext.commands import Bot
-from discord.ext import commands
-import asyncio
-import time
+import discord;
+from discord.ext.commands import Bot;
+from discord.ext import commands;
+import asyncio;
+import time;
 
-Client = discord.Client()
-client = comamds.Bot(command_prefix='!pubg')
+Client = discord.Client();
+client = comamds.Bot(command_prefix='!pubg');
 
 @client.event
 async def on_message(message):
