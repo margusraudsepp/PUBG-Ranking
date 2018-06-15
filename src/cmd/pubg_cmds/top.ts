@@ -120,7 +120,7 @@ export class Top extends Command {
                 let names: string = '';
                 let ratings: string = '';
                 let kds: string = '';
-                let koht: string = '';
+                //let koht: string = '';
                 let vaike: string = '&nbsp;';
                 // Construct top strings
                 for (var i = 0; i < topPlayers.length; i++) {
