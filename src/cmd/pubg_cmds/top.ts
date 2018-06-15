@@ -146,7 +146,7 @@ export class Top extends Command {
                    
                 }
 
-                embed.addField('Name', (i + 1) + '.\t' +names, true)
+                embed.addField('Name', i + ' ' + names, true)
                     //.addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
