@@ -42,7 +42,8 @@ export class CommonService {
     static getParamValue(search: string, params: Array<any>, defaultParam: any): string {
         let index = this.isSubstringOfElement(search, params);
         if(index >= 0) {
-            return params[index].slice(params[index].indexOf('=') + 1).toLowerCase();
+            return params[index].slice(params[index].indexOf('=') + 1);
+            //return params[index].slice(params[index].indexOf('=') + 1).toLowerCase(); õige
         } else {
             return defaultParam;
         }
