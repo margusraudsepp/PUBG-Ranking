@@ -15,14 +15,20 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-import discord from discord.ext.commands;
-import Bot from discord.ext;
-import commands;
-import asyncio;
-import time;
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-Client = discord.Client();
-client = comamds.Bot(command_prefix='!pubg');
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
+client.login('token');
 
 @client.event
 async def on_message(message):
