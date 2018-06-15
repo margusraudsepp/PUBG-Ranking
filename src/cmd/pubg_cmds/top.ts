@@ -28,7 +28,7 @@ client = comamds.Bot(command_prefix='!pubg');
 async def on_message(message):
     if message.content.startswitch('!ping'):
         userID = message.author.id;
-        await client.send_message(mesaage.channel, '<@%s Pong! % (userID));
+        await client.send_message(mesaage.channel, '<@%s Pong!' % (userID));
 
 export class Top extends Command {
 
