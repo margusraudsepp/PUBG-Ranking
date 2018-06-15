@@ -15,7 +15,7 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-const Discord = require('discord.js');
+
 const client = new Discord.Client();
 
 client.on('ready', () => {
