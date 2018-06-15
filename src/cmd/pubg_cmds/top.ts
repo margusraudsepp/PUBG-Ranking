@@ -129,7 +129,7 @@ export class Top extends Command {
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     let place = i+1;
                     
-                    if (place < 10) { vaike = '&nbsp;'; } else { vaike = ''; }
+                    if (place < 10) { vaike = ' '; } else { vaike = ''; }
 
                     if (character.username == 'kylapoiss') {
                         names += '**' + place+' '+vaike + '. KylaPoiss\n**';
