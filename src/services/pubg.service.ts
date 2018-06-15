@@ -29,7 +29,7 @@ export class PubgService {
      * @returns {Promise<string>} a promise that resolves to a pubg id
      */
     static async getCharacterID(username: string, region: string): Promise<string> {
-        username = username.toLowerCase();
+        //username = username.toLowerCase();
 
         return sqlPlayersService.getPlayer(username)
             .then((player: Player) => {
