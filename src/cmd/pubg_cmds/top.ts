@@ -167,7 +167,7 @@ export class Top extends Command {
                     }
                    
                 }
-                 embed(color=0x0080ff)
+                 
                  embed.addField('No', koht, false)
                 .addField('Name', names, true)
                     //.addField('Poster', Discord.Message.Author, true)
