@@ -132,7 +132,7 @@ export class Top extends Command {
                     //if (place < 9) { vaike = ' '; } else { vaike = ''; }
 
                    	if (character.username == 'kylapoiss') {
-                        names += '**' + vaike + ' ' + place + '. KylaPoiss\n**';
+                        names += '** ' + vaike + ' ' + place + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';
                     } else if (character.username == 'kreller') {
@@ -156,7 +156,7 @@ export class Top extends Command {
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
                     } else if (character.username == 'macprap') {
-                        names += ' ' + vaike + ' ' + place + '. MacPrap\n';
+                        names += '  ' + vaike + ' ' + place + '. MacPrap\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
                     } else if (character.username == 'ennji') {
