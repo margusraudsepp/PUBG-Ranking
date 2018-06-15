@@ -15,16 +15,20 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-import discord from discord.ext 
-import commands
+import discord 
+from discord.ext.commands import Bot
+from discord.ext import commands
 import asyncio
+import time
 
-client = discord.Client()
-bot=commands.Bot(command_prefix='!pubg')
+Client = discord.Client()
+client = comamds.Bot(command_prefix='!pubg')
 
-@bot.command(aliases=['rank', 'top'])
-async def hello(ctc):
-    wait ct.send(ctx.autor.mention)
+@client.event
+async def on_message(message):
+    if message.content.startswitch)'ping'):
+        userID = message.author.id
+        await client.send_message(mesaage.channel, '<@%s Pong! % (userID))
 
 export class Top extends Command {
 
