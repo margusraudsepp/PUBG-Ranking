@@ -42,7 +42,8 @@ export class Rank extends Command {
             cs.handleError(msg, 'Error:: Must specify a username', this.help);
             return;
         }
-        let username: string = params[0].toLowerCase();
+        //let username: string = params[0].toLowerCase();
+        let username: string = params[0];
         let serverDefaults: Server, season: string, region: string, mode: string;
         if (msg.guild) {
             serverDefaults = await sqlServerService.getServerDefaults(msg.guild.id);
