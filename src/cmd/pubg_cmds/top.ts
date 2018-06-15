@@ -121,13 +121,16 @@ export class Top extends Command {
                 let ratings: string = '';
                 let kds: string = '';
                 let koht: string = '';
+                let vaike: string = '&nbsp;';
                 // Construct top strings
                 for (var i = 0; i < topPlayers.length; i++) {
                     let character: Player = topPlayers[i];
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     
-                    koht += i+1+'.\n'; 
+                    if ((i+1) < 10) { vaike = '&nbsp;'; } else { vaike = ''; }
+                    koht += i+1+' ' + vaike + '.\n'; 
+                    
                     if (character.username == 'kylapoiss') {
                         names += '**' + (i+1) + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
@@ -168,8 +171,8 @@ export class Top extends Command {
                    
                 }
                  
-                 embed.addField('No', koht, false)
-                .addField('Name', names, true)
+                 //embed.addField('No', koht, false)
+                embed.addField('Name', names, true)
                     //.addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
