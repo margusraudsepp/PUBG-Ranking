@@ -127,11 +127,11 @@ export class Top extends Command {
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     
                     if (character.username == 'kylapoiss') {
-                        names += '**' + i + '. KylaPoiss\n**';
+                        names += '**' + (i+1) + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';
                     } else {
-                        names += i + '. ' + character.username + '\n';
+                        names += (i+1) + '. ' + character.username + '\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';
                     }
