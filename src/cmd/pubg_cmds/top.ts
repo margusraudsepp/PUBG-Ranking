@@ -15,9 +15,9 @@ import { Seasons as SeasonEnum } from '../../enums/season.enum';
 import { SquadSize as SquadSizeEnum } from '../../enums/squadSize.enum';
 import { Server } from '../../models/server';
 
-import discord;
-from discord.ext.commands import Bot;
-from discord.ext import commands;
+import discord from discord.ext.commands;
+import Bot from discord.ext;
+import commands;
 import asyncio;
 import time;
 
