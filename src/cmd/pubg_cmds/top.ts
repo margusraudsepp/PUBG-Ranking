@@ -120,12 +120,14 @@ export class Top extends Command {
                 let names: string = '';
                 let ratings: string = '';
                 let kds: string = '';
+                let koht: string = '';
                 // Construct top strings
                 for (var i = 0; i < topPlayers.length; i++) {
                     let character: Player = topPlayers[i];
                     let ratingStr: string = character.rating ? `${character.rank} / ${character.rating}` : 'Not available';
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     
+                    koht += i+1; 
                     if (character.username == 'kylapoiss') {
                         names += '**' + (i+1) + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
@@ -154,8 +156,8 @@ export class Top extends Command {
                         names += (i+1) + '. MacPrap\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
-                    } else if (character.username == 'enjii') {
-                        names += (i+1) + '. Enjii\n';
+                    } else if (character.username == 'ennji') {
+                        names += (i+1) + '. Ennji\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';      
                     } else {
@@ -165,8 +167,8 @@ export class Top extends Command {
                     }
                    
                 }
-
-                embed.addField('Name', names, true)
+                 embed.addField('No', koht, true)
+                .addField('Name', names, true)
                     //.addField('Poster', Discord.Message.Author, true)
                     .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
