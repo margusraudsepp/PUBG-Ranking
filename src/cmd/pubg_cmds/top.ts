@@ -121,7 +121,7 @@ export class Top extends Command {
                 let ratings: string = '';
                 let kds: string = '';
                 //let koht: string = '';
-                let vaike: string = '&nbsp;';
+                let vaike: string = '';
                 // Construct top strings
                 for (var i = 0; i < topPlayers.length; i++) {
                     let character: Player = topPlayers[i];
@@ -129,7 +129,7 @@ export class Top extends Command {
                     let kdsStr: string = `${character.kd} / ${character.kda} / ${character.average_damage_dealt}`;
                     let place = i+1;
                     
-                    if (place < 10) { vaike = ' '; } else { vaike = ''; }
+                    //if (place < 9) { vaike = ' '; } else { vaike = ''; }
 
                    	if (character.username == 'kylapoiss') {
                         names += '**' + vaike + ' ' + place + '. KylaPoiss\n**';
