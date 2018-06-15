@@ -132,39 +132,39 @@ export class Top extends Command {
                     if (place < 10) { vaike = ' '; } else { vaike = ''; }
 
                    	if (character.username == 'kylapoiss') {
-                        names += '**' + vaike + ' ' + place + '.  ' KylaPoiss\n**';
+                        names += '**' + vaike + ' ' + place + '. KylaPoiss\n**';
                         ratings += '**'+ratingStr + '\n**';
                         kds += '**'+kdsStr + '\n**';
                     } else if (character.username == 'kreller') {
-                        names += ' ' + vaike + ' ' + place + '.  ' KreLLeR\n';
+                        names += ' ' + vaike + ' ' + place + '. KreLLeR\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';    
                     } else if (character.username == 'thegodofgods') {
-                        names += ' ' + vaike + ' ' + place + '.  ' TheGodofGods\n';
+                        names += ' ' + vaike + ' ' + place + '. TheGodofGods\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';    
                     } else if (character.username == 'bambambiim') {
-                        names += ' ' + vaike + ' ' + place + '.  ' BamBamBiim\n';
+                        names += ' ' + vaike + ' ' + place + '. BamBamBiim\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
                     } else if (character.username == 'tapanmaha') {
-                        names += ' ' + vaike + ' ' + place + '.  ' TapanMaha\n';
+                        names += ' ' + vaike + ' ' + place + '. TapanMaha\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';  
                     } else if (character.username == 'saucecastillo') {
-                        names += ' ' + vaike + ' ' + place + '.  ' SauceCastillo\n';
+                        names += ' ' + vaike + ' ' + place + '. SauceCastillo\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
                     } else if (character.username == 'macprap') {
-                        names += ' ' + vaike + ' ' + place + '.  ' MacPrap\n';
+                        names += ' ' + vaike + ' ' + place + '. MacPrap\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';   
                     } else if (character.username == 'ennji') {
-                        names += ' ' + vaike + ' ' + place + '.  ' Ennji\n';
+                        names += ' ' + vaike + ' ' + place + '. Ennji\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';      
                     } else {
-                        names += place+'. '+vaike + character.username + '\n';
+                        names += ' ' + vaike + ' ' + place + '. ' + character.username + '\n';
                         ratings += ratingStr + '\n';
                         kds += kdsStr + '\n';
                     }
