@@ -167,11 +167,11 @@ export class Top extends Command {
                     }
                    
                 }
-                 embed(color=0x0080ff);
-                 embed.addField('No', koht, false);
-                .addField('Name', names, true);
+                 embed(color=0x0080ff)
+                 embed.addField('No', koht, false)
+                .addField('Name', names, true)
                     //.addField('Poster', Discord.Message.Author, true)
-                    .addField('Rank / Rating', ratings, true);
+                    .addField('Rank / Rating', ratings, true)
                     .addField('KD / KDA / Avg Dmg', kds, true);
                 await msg.edit({ embed });
             });
